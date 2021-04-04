@@ -1,0 +1,29 @@
+.input {
+    width: 100%;
+    border-radius: 6px;
+    padding: 1rem;
+    border: 2px solid #aaa;
+    color: #000;
+    background: #fff;
+
+    &:focus {
+        outline: none;
+        border-color: $blue;
+    }
+}
+
+textarea {
+    width: 100%;
+    border-radius: 6px;
+    padding: 1rem;
+    border: 2px solid #aaa;
+    color: #000;
+    background: #fff;
+    height: 240px;
+    resize: vertical;
+
+    &:focus {
+        outline: none;
+        border-color: $blue;
+    }
+}

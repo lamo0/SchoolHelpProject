@@ -1,0 +1,37 @@
+@mixin responsive ($type) {
+    @if ($type == desktop) {
+        @media screen and (min-width: $break-point-2) {
+            @content;
+        }
+    }
+
+    @else if ($type == tablet) {
+        @media screen and (min-width: $break-point-1 + 1) {
+            @media screen and (max-width: $break-point-2 - 1) {
+                @content;
+            }
+        }
+    }
+
+    @else if ($type == mobile) {
+        @media screen and (max-width: $break-point-1) {
+            @content
+        }
+    }
+}
+
+@mixin button-color ($bg, $fg: #fff) {
+    border-color: $bg;
+    color: $fg;
+    background-color: $bg;
+
+    &:active {
+        border-color: darken($bg, 20%);
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.24) inset;
+    }
+
+    &.button-inverse {
+        color: $bg;
+        background-color: $fg;
+    }
+}

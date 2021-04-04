@@ -1,0 +1,20 @@
+- 1. page setup, margins
+- 2. base typography (including bold and links and headings)
+- 3. grid
+- 4. top-nav
+5a. dashboard-top-nav
+5. side-nav
+-  6. input, textarea, buttons, button-groups
+- 7. hr lol
+- 8. different fonts
+- 9. big-picture
+- 10. banner, including cool clippy background text
+- 10. footer, including footer-nav
+11. drop downs (including in the navs)
+12. static-content (including non-static option and three panel option)
+13. icons
+14. custom alerts
+15. custom popups (including bottom page ones)
+15. add event
+16. create dashboard page (including calendar)
+17. create cool charts

@@ -1,0 +1,77 @@
+button, [type="button"], [type="submit"] {
+    &:not(.button-no-padding) {
+        padding: 0.8rem 1rem; }
+    border-radius: 6px;
+    border: 2px solid #aaa;
+    cursor: pointer;
+    font-weight: 500;
+    color: #000;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.4;
+    transition: border 0.08s ease-out;
+
+    &:hover {
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+        border-color: darken(#fff, 40%);
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &.button-block {
+        display: block;
+        width: 100%;
+    }
+
+    &.button-small {
+        &:not(.button-no-padding) {
+            padding: 0.6rem 0.8rem; }
+        font-size: 0.9rem;
+    }
+
+    &.button-large {
+        &:not(.button-no-padding) {
+            padding: 1.0rem 1.2rem; }
+        font-size: 1.1rem;
+    }
+
+    &.button-blue {
+        @include button-color($blue) }
+
+    &.button-brown {
+        @include button-color($brown) }
+
+    &.button-gray {
+        @include button-color($gray) }
+
+    &.button-green {
+        @include button-color($green) }
+
+    &.button-indigo {
+        @include button-color($indigo) }
+
+    &.button-orange {
+        @include button-color($orange) }
+
+    &.button-pink {
+        @include button-color($pink) }
+
+    &.button-purple {
+        @include button-color($purple) }
+
+    &.button-red {
+        @include button-color($red) }
+
+    &.button-teal {
+        @include button-color($teal) }
+
+    &.button-yellow {
+        @include button-color($yellow) }
+}

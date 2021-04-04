@@ -1,0 +1,65 @@
+.banner {
+    $light-fg: #111;
+    $dark-fg: #eee;
+
+    background: $blue;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .banner-content {
+        text-align: center;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        >* {
+            flex: 0 0 100%; }
+
+        min-height: 80%;
+
+        .banner-heading {
+            font-size: 1.3em;
+            text-shadow: 0 1px 1px #000;
+        }
+        
+        @include responsive(desktop) {
+            width: 75%;
+        }
+        
+        @include responsive(tablet) {
+            width: 80%;
+        }
+        
+        @include responsive(mobile) {
+            width: 85%;
+        }
+
+        max-width: 800px;
+    }
+
+    .banner-blur { // doesnt work with fire fox :(
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        height: 100%;
+    }
+
+    &.banner-darken {
+        box-shadow: inset 0px 0px 0px 100vmax rgba(0, 0, 0, .6);
+        color: $dark-fg;
+    }
+    
+    &.banner-lighten {
+        box-shadow: inset 0px 0px 0px 100vmax rgba(255, 255, 255, 0.3);
+        color: $light-fg;
+    }
+}

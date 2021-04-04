@@ -1,0 +1,54 @@
+.grid {
+    padding: 0;
+    margin: 0;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: percentage($i/12);
+        }
+    }
+
+    [class*='col-'] {
+        float: left;
+        
+        @include responsive (desktop) {
+            padding-right: 25px;
+        }
+        
+        @include responsive (tablet) {
+            padding-right: 16px;
+        }
+        
+        &:last-child {
+            padding-right: 0;
+        }
+        
+       @include responsive (mobile) {
+            width: 100%;
+            
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &.grid-tablet-expand {
+        [class*='col-'] {
+            @include responsive (tablet) {
+                width: 100%;
+                
+                padding-right: 0;
+                
+                &:not(:last-of-type) {
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@keyframes slide {
+
+}
+
+.topnav {
+    width: 100%;
+    border-bottom: 1px solid rgba(120, 120, 120, .5);
+    box-shadow: 0 -2px 5px 0 rgba(120, 120, 120, .6);
+    padding: 0;
+    margin: 0;
+
+    .topnav-content {
+        width: 100%;
+    }
+
+    @include responsive(desktop) {
+        .topnav-content {
+            position: relative;
+
+            margin: 0 auto;
+            max-width: 1000px;
+
+            display: flex;
+            justify-content: flex-end;
+
+            .nav-item {
+                &:first-of-type {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                padding: 15px 20px;
+
+                a {
+                    color: currentColor;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(tablet) {
+        .topnav-content {
+            position: relative;
+
+            margin: 0 auto;
+            max-width: 1000px;
+
+            display: flex;
+            justify-content: flex-end;
+
+            .nav-item {
+                &:first-of-type {
+                    position: absolute;
+                    left: 0;
+                }
+
+                padding: 15px 20px;
+
+                a {
+                    color: currentColor;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(mobile) {
+        .topnav-content {
+            padding: 0 10px;
+            font-size: 1.4rem;
+
+            .nav-item {
+                &>* {
+                    display: inline-block;
+                    padding: 8px 0;
+
+                    color: currentColor;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                
+                &:first-of-type {
+                    text-align: center;
+                    font-weight: bold;
+
+                    border: 0;
+                }
+
+                border-bottom: 1px solid rgba(120, 120, 120, .5);
+
+                &:not(:first-of-type) {
+                    display: none;
+                }
+            }
+        }
+
+        &.expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            z-index: 2;
+
+            .topnav-content {
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                .nav-item {
+                    &:first-of-type {
+                        border-bottom: 1px solid rgba(120, 120, 120, .5);
+                    }
+
+                    &:not(:first-of-type) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-mobile-expander {
+        display: none;
+        @include responsive(mobile) {
+            display: inline;
+            padding-left: 8px;
+            padding-right: 8px;
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+
+            i {
+                padding: 0;
+                margin: 0;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

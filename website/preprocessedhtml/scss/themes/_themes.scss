@@ -1,0 +1,82 @@
+body {
+    // Themes
+    &.light {
+        color: $theme-light-fg;
+        background: $theme-light-bg;
+
+        a {
+            color: $blue;
+        }
+
+        .topnav.expanded {
+            background: $theme-light-bg;
+        }
+
+        .section.section-secondary {
+            background: darken($theme-light-bg, 5%);
+        }
+
+        button, [type="submit"], [type="button"] {
+            &.button-inverse {
+                background-color: $theme-light-bg;
+            }
+        }
+
+        .input, textarea {
+            background-color: $theme-light-bg;
+            color: $theme-dark-bg;
+        }
+
+        .footer {
+            background: darken($theme-light-bg, 10%);
+
+            .footer-content {
+                color: $theme-light-fg;
+
+                a {
+                    color: $theme-light-fg;
+                }
+            }
+        }
+    }
+
+    &.dark {
+        color: $theme-dark-fg;
+        background: $theme-dark-bg;
+
+        a { 
+            color: lighten($blue, 5%); 
+        }
+
+        .topnav.expanded {
+            background: $theme-dark-bg;
+        }
+
+        .section.section-secondary {
+            background: lighten($theme-dark-bg, 5%);
+        }
+
+        button, [type="submit"], [type="button"] {
+            &.button-inverse {
+                background-color: $theme-dark-bg;
+            }
+        }
+
+        .input, textarea {
+            background-color: $theme-dark-bg;
+            color: $theme-light-bg;
+        }
+
+        .footer {
+            background: darken($theme-dark-bg, 5%);
+
+            .footer-content {
+                color: $theme-dark-fg;
+
+                a {
+                    color: $theme-dark-fg;
+                }
+            }
+        }
+    }
+}

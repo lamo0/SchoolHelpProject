@@ -1,0 +1,20 @@
+.section {
+    @include responsive(desktop) {
+        .section-content {
+            padding: 2.7rem 2rem;
+
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+    }
+    @include responsive(tablet) {
+        .section-content {
+            padding: 2rem 2.8rem;
+        }
+    }
+    @include responsive(mobile) {
+        .section-content {
+            padding: 3rem 0.8rem;
+        }
+    }
+}

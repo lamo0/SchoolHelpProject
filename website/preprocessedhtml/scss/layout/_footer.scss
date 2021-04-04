@@ -1,0 +1,119 @@
+.footer {
+    color: #000;
+    display: flex;
+    align-items: center;
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    a {
+        position: relative;
+        padding: 3px;
+        padding-left: 13px;
+
+        &:hover {
+            text-decoration: none;
+
+            &:before {
+                content: "";
+            }
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            width: 5px;
+            height: 100%;
+        }
+    }
+
+    min-height: 290px;
+    .footer-content {
+        display: grid;
+
+        grid-template-columns: 50% 50%;
+
+        >* {
+            padding: 10px;
+        }
+        
+        .first {
+            margin-right: 20px;
+        }
+
+        .footer-title {
+            margin-bottom: 5px;
+        }
+
+        .footer-sub {
+            margin-bottom: 5px;
+        }
+
+        .footer-col-title {
+            padding-left: 8px;
+            border-left: 5px solid $blue;
+        }
+
+        :nth-child(2) {
+            a {
+                &:before {
+                    background: $blue;
+                }
+            }
+
+            .footer-col-title {
+                border-left-color: $blue;
+            }
+        }
+
+        :nth-child(3) {
+            a {
+                &:before {
+                    background: $orange;
+                }
+            }
+
+            .footer-col-title {
+                border-left-color: $orange;
+            }
+        }
+
+        :nth-child(4) {
+            a {
+                &:before {
+                    background: $red;
+                }
+            }
+
+            .footer-col-title {
+                border-left-color: $red;
+            }
+        }
+    }
+
+    @include responsive (desktop) {
+        .footer-content {
+            grid-template-columns: 35% 21.66666667% 21.66666667% 21.66666667%;
+        }
+    }
+
+    @include responsive (tablet) {
+        .footer-content {
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+    @include responsive (mobile) {
+        .footer-content {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &, * {
+        -border: 1px solid red;
+    }
+}
