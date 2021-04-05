@@ -10,9 +10,9 @@
 - 9. big-picture
 - 10. banner, including cool clippy background text
 - 10. footer, including footer-nav
-11. drop downs (including in the navs)
+- 11. drop downs (including in the navs)
 12. static-content (including non-static option and three panel option)
-13. icons
+- 13. icons
 14. custom alerts
 15. custom popups (including bottom page ones)
 15. add event

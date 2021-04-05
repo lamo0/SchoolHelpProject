@@ -21,9 +21,84 @@
 
         <!-- Scripts -->
         <script src="../static/js/main.js" defer type="module"></script>
-        <script src="../static/js/nav.js" defer type="module"></script>
+        <script src="../static/js/dashboard.js" defer type="module"></script>
     </head>
     <body>
-        <div class="sidenav"></div>
+        <!-- Dashboard Container -->
+        <div class="dashboard">
+            <!-- Side Nav -->
+            <div class="sidenav">
+                <div class="sidenav-content">
+                    <h5 class="high-emphasis sidenav-section-title">Home</h5>
+                    <div class="sidenav-link-item">
+                        <a href="#0">
+                            <span class="material-icons sidenav-icon">dashboard</span>
+                            Dashboard
+                        </a>
+                    </div>
+                    <div class="sidenav-link-item">
+                        <a href="#0">
+                            <span class="material-icons sidenav-icon">add_circle</span>
+                            Add Task
+                        </a>
+                    </div>
+                    <div class="sidenav-link-item">
+                        <a href="#0">
+                            <span class="material-icons sidenav-icon">add_task</span>
+                            Completed Tasks
+                        </a>
+                    </div>
+                    <div class="sidenav-link-item">
+                        <a href="#0">
+                            <span class="material-icons sidenav-icon">equalizer</span>
+                            Analytics
+                        </a>
+                    </div>
+
+                    <br>
+
+                    <h5 class="high-emphasis sidenav-section-title">Site</h5>
+                    <div class="sidenav-link-item">
+                        <a href="#0" id="toggleTheme">
+                            <span class="material-icons sidenav-icon">dark_mode</span>
+                            Change Theme
+                        </a>
+                    </div>
+                    <div class="sidenav-link-item">
+                        <a href="design.html">
+                            <span class="material-icons sidenav-icon">home</span>
+                            Home
+                        </a>
+                    </div>
+                    <div class="sidenav-link-item">
+                        <a href="#0">
+                            <span class="material-icons sidenav-icon">logout</span>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard container -->
+            <div class="dashboard-container">
+                
+                <!-- Top Nav -->
+                <div class="dashboard-topnav">
+                    <form action="" class="dashboard-topnav-item">
+                        <input placeholder="Search..." type="text">
+                    </form>
+                    <div class="dashboard-topnav-bell dashboard-topnav-item">
+                        <span class="material-icons">notifications</span>
+                    </div>
+                    <div class="dashboard-topnav-account dashboard-topnav-item">
+                        Hello
+                    </div>
+                </div>
+
+                <p style="font-size: 2em">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam a, omnis molestiae culpa voluptatibus blanditiis, ratione ad cupiditate expedita sint reiciendis velit voluptatem praesentium impedit placeat et. Molestiae provident suscipit iste asperiores quaerat ipsum earum blanditiis voluptatem minima impedit. Officiis numquam veniam facere eveniet nam natus magni odit distinctio molestiae?
+                </p>
+            </div>
+        </div>
     </body>
 </html>

@@ -38,6 +38,30 @@ body {
                 }
             }
         }
+
+        .dropdown {
+            .dropdown-content {
+                background-color: $theme-light-bg;
+                
+                a {
+                    &:hover {
+                        background-color: darken($theme-light-bg, 10%);
+                    }
+                }
+            }
+        }
+        
+        .sidenav {
+            background-color: darken($theme-light-bg, 5%);   
+
+            a {
+                color: $theme-light-fg;
+
+                &:hover {
+                    background-color: darken(darken($theme-light-bg, 5%), 8%);
+                }
+            }
+        }
     }
 
     &.dark {
@@ -75,6 +99,30 @@ body {
 
                 a {
                     color: $theme-dark-fg;
+                }
+            }
+        }
+
+        .dropdown {
+            .dropdown-content {
+                background-color: $theme-dark-bg;
+
+                a {
+                    &:hover {
+                        background-color: darken($theme-dark-bg, 5%);
+                    }
+                }
+            }
+        }
+
+        .sidenav {
+            background-color: lighten($theme-dark-bg, 5%);
+
+            a {
+                color: $theme-dark-fg;
+
+                &:hover {
+                    background-color: darken($theme-dark-bg, 5%);
                 }
             }
         }

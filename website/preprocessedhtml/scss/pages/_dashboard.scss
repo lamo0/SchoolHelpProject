@@ -1,0 +1,121 @@
+.dashboard {
+    height: 100%;
+    width: 100%;
+
+    .sidenav {
+        .sidenav-content {
+            padding: 15px;
+            height: 100%;
+    
+            .sidenav-section-title {
+                margin-bottom: 5px;
+                padding: 0 5px;
+            }
+    
+            .sidenav-link-item {
+                display: block;
+    
+                a {
+                    display: block;
+                    margin-bottom: 5px;
+                    padding: 10px;
+                    border-radius: 5px;
+    
+                    .sidenav-icon {
+                        position: relative;
+                        top: 5px;
+                        margin-right: 5px;
+                    }
+    
+                    &:hover {
+                        color: $blue;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    
+        @include responsive (desktop) {
+            width: 270px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+    
+            .sidenav-content {
+                .sidenav-link-item {
+                    a {
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+        
+        @include responsive (tablet) {
+            max-width: 200px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+    
+            .sidenav-content {
+                .sidenav-link-item {
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        
+        @include responsive (mobile) {
+            &.expanded {
+                .sidenav-content {
+                    display: none;
+                }
+            }
+        }
+    
+        .nav-expander-container {
+            display: none;
+            @include responsive (mobile) {
+                text-align: center;
+                padding: 5px;
+        
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .material-icons {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    
+    .dashboard-container {
+        @include responsive (desktop) {
+            margin-left: 270px;
+        }
+        
+        @include responsive (tablet) {
+            margin-left: 200px;
+        }
+
+        .dashboard-topnav {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: auto 150px 150px;
+
+            form, input {
+                width: 100%;
+                height: 100%;
+            }
+
+            .dashboard-topnav-item {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+            }
+        }
+    }
+}

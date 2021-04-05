@@ -1,0 +1,42 @@
+.dropdown {
+	display: inline-block;
+	position: relative;
+
+    .dropdown-activator {
+        display: inline-block
+    }
+
+    .dropdown-content {
+        position: absolute;
+        z-index: 2;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 200px;
+        border: 1px solid #bababa;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        display: none;
+
+        &>* {
+            padding: 0.4rem 0.5rem;
+            display: block
+        }
+
+        hr {
+            padding: 0;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        
+        &.dropdown-show {
+            display: block;
+        }
+    }
+}

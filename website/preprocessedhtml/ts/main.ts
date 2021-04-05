@@ -1,16 +1,20 @@
 export {}
-
+// Variables
 enum theme {light, dark}
 
 let currentTheme:theme
 let defaultTheme:theme
 
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+let opened:any = null
+
+const prefersDarkScheme:any = window.matchMedia("(prefers-color-scheme: dark)")
+
 if (prefersDarkScheme.matches)
     defaultTheme = theme.dark
-else 
+else
     defaultTheme = theme.light
 
+// Functions
 const saveTheme = () => {
     localStorage['currentTheme'] = JSON.stringify(currentTheme)
 }
@@ -34,11 +38,40 @@ const toggleTheme = () => {
     (currentTheme != theme.light) ? switchTheme(theme.light) : switchTheme(theme.dark)
 }
 
+const toggleDropdownVisibility = e => e.classList.toggle('dropdown-show')
+
+const handleDropdown = e => {
+    const clickedItem = e.parentElement.lastChild.previousSibling
+
+    toggleDropdownVisibility(clickedItem)
+
+    if (!opened) 
+        opened = clickedItem
+    else if (opened == clickedItem)
+        opened = null
+     else {
+        toggleDropdownVisibility(opened)
+        opened = clickedItem
+    }
+}
+
+const handleClick = e => {
+    if (e.target.className.includes("dropdown"))
+        handleDropdown(e.target)
+    else if (opened) {
+        toggleDropdownVisibility(opened)
+        opened = null
+    }
+}
+
 window.onload = () => {
     loadTheme()
-    document.querySelector(".js-current-year").innerHTML = new Date().getFullYear().toString()
 
-    document.onkeydown = keydown; 
+    if (document.querySelector(".js-current-year") != (null || undefined))
+        document.querySelector(".js-current-year").innerHTML = new Date().getFullYear().toString()
+
+    // Event Listeners
+    document.onkeydown = keydown
     function keydown (evt) { 
         if (!evt) evt = event; 
         if (evt.altKey && (evt.keyCode === 192)) { 
@@ -46,7 +79,16 @@ window.onload = () => {
         } 
     }
 
-    document.getElementById("toggleTheme").addEventListener("mouseup", e => {
-        toggleTheme()
-    })
+    if (document.getElementById("toggleTheme") != (null || undefined))
+        document.getElementById("toggleTheme").addEventListener("mouseup", toggleTheme)
+
+    for (let i = 0; i < document.querySelectorAll(".dropdown-changable-item").length; i++)
+        document.querySelectorAll(".dropdown-changable-item")[i].addEventListener("click", e => {
+            let target:any = e.target
+
+            target.parentElement.parentElement.querySelector(".dropdown-activator").innerText = target.getAttribute("value")
+            target.parentElement.parentElement.querySelector(".dropdown-activator").setAttribute("value", target.getAttribute("value"))
+        })
+
+    document.addEventListener('click', handleClick)
 }

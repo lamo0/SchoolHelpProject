@@ -20,5 +20,5 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html, body {
     height: 100%;
-    animation: fadeIn ease-out 0.1s;
+    animation: fadeIn cubic-bezier(.08,.82,.17,1) 0.2s;
 }
