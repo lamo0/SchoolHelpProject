@@ -2,6 +2,8 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 // import vendors
+@import "vendors/modal";
+@import "vendors/alert";
 // import base
 @import "base/normalize";
 @import "base/reset";
@@ -19,5 +21,6 @@
 @import "components/dropdown";
 // import pages
 @import "pages/dashboard";
+@import "pages/dashboardItem";
 // import themes
 @import "themes/themes"

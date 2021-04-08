@@ -20,6 +20,8 @@
             href="../static/css/main.css">
 
         <!-- Scripts -->
+        <script src="../static/js_vendor/carousel.js" defer></script>
+        <script src="../static/js_vendor/modal.js" defer></script>
         <script src="../static/js/main.js" defer type="module"></script>
         <script src="../static/js/dashboard.js" defer type="module"></script>
     </head>
@@ -81,23 +83,102 @@
 
             <!-- Dashboard container -->
             <div class="dashboard-container">
-                
+
                 <!-- Top Nav -->
                 <div class="dashboard-topnav">
                     <form action="" class="dashboard-topnav-item">
                         <input placeholder="Search..." type="text">
                     </form>
-                    <div class="dashboard-topnav-bell dashboard-topnav-item">
+                    <div class="dashboard-topnav-item dashboard-topnav-item-notifications modal">
                         <span class="material-icons">notifications</span>
+                        <div class="modal-content">hey</div>
                     </div>
-                    <div class="dashboard-topnav-account dashboard-topnav-item">
-                        Hello
+                    <div class="dashboard-topnav-item">
+                        <span>Zak Venter</span>
                     </div>
                 </div>
 
-                <p style="font-size: 2em">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam a, omnis molestiae culpa voluptatibus blanditiis, ratione ad cupiditate expedita sint reiciendis velit voluptatem praesentium impedit placeat et. Molestiae provident suscipit iste asperiores quaerat ipsum earum blanditiis voluptatem minima impedit. Officiis numquam veniam facere eveniet nam natus magni odit distinctio molestiae?
-                </p>
+                <!-- Dashboard Content -->
+                <div class="dashboard-content">
+                    <!-- Dashboard Item Display -->
+                    <div class="dashboard-item-gallery">
+                        <div class="dashboard-item dashboard-item-blue">
+                            <div class="dashboard-item-title">
+                                Crest Project
+                            </div>
+                            <div class="dashboard-item-title-due">
+                                Due in 1 day
+                            </div>
+                            <div class="dashboard-item-title-sub high-emphasis">
+                                Science Assesment
+                            </div>
+                        </div>
+                        <div class="dashboard-item dashboard-item-green">
+                            <div class="dashboard-item-title">
+                                English Letter
+                            </div>
+                            <div class="dashboard-item-title-due">
+                                Due in 2 days
+                            </div>
+                            <div class="dashboard-item-title-sub high-emphasis">
+                                English Assesment
+                            </div>
+                        </div>
+                        <div class="dashboard-item dashboard-item-green">
+                            <div class="dashboard-item-title">
+                                English Retrieval Chart
+                            </div>
+                            <div class="dashboard-item-title-due">
+                                Due in 2 days
+                            </div>
+                            <div class="dashboard-item-title-sub high-emphasis">
+                                English Assesment
+                            </div>
+                        </div>
+                        <div class="dashboard-item dashboard-item-orange">
+                            <div class="dashboard-item-title">
+                                Quadratics
+                            </div>
+                            <div class="dashboard-item-title-due">
+                                Due in 4 days
+                            </div>
+                            <div class="dashboard-item-title-sub high-emphasis">
+                                Maths Test
+                            </div>
+                        </div>
+                        <div class="dashboard-item dashboard-item-red">
+                            <div class="dashboard-item-title">
+                                Science Project
+                            </div>
+                            <div class="dashboard-item-title-due">
+                                Due in 6 days
+                            </div>
+                            <div class="dashboard-item-title-sub high-emphasis">
+                                Science Assesment
+                            </div>
+                        </div>
+                        <div class="dashboard-item dashboard-item-teal">
+                            <div class="dashboard-item-title">
+                                Science Project
+                            </div>
+                            <div class="dashboard-item-title-due">
+                                Due in 6 days
+                            </div>
+                            <div class="dashboard-item-title-sub high-emphasis">
+                                Science Assesment
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-calendar">
+                        <div class="dashboard-calendar-nav">
+                            <button id="month-last" class="button-blue button-xxsmall bold">&larr;</button>
+
+                            <h6 id="month-label">month-label</h6>
+
+                            <button id="month-next" class="button-blue button-xxsmall bold">&rarr;</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

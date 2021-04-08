@@ -30,6 +30,18 @@ button, [type="button"], [type="submit"] {
         width: 100%;
     }
 
+    &.button-xxsmall {
+        &:not(.button-no-padding) {
+            padding: 0.4rem 0.6rem; }
+        font-size: 0.8rem;
+    }
+
+    &.button-xsmall {
+        &:not(.button-no-padding) {
+            padding: 0.5rem 0.6rem; }
+        font-size: 0.85rem;
+    }
+
     &.button-small {
         &:not(.button-no-padding) {
             padding: 0.6rem 0.8rem; }

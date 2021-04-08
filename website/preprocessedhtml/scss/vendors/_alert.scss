@@ -1,0 +1,77 @@
+@mixin alert-color ($color) {
+	border-color: $color;
+	background: rgba(lighten($color, 35%), 0.94);
+    color: darken($color, 15%);
+}
+
+.alert {
+	position: relative;
+	margin: 2px;
+	border: 1px solid #bababa;
+	border-radius: 6px;
+	padding: 15px
+}
+
+.alert .alert-title {
+	font-weight: 900;
+	font-size: 1.3rem
+}
+
+.alert .alert-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	line-height: 0.5;
+	font-size: 2rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.alert.alert-hidden {
+	display: none
+}
+
+.alert.alert-blue {
+	@include alert-color($blue)
+}
+
+.alert.alert-gray {
+	@include alert-color($gray)
+}
+
+.alert.alert-green {
+	@include alert-color($green)
+}
+
+.alert.alert-indigo {
+	@include alert-color($indigo)
+}
+
+.alert.alert-orange {
+	@include alert-color($orange)
+}
+
+.alert.alert-pink {
+	@include alert-color($pink)
+}
+
+.alert.alert-purple {
+	@include alert-color($purple)
+}
+
+.alert.alert-red {
+	@include alert-color($red)
+}
+
+.alert.alert-teal {
+	@include alert-color($teal)
+}
+
+.alert.alert-yellow {
+	@include alert-color($yellow)
+}
+

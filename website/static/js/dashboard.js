@@ -14,4 +14,13 @@ navExpanderContainer.addEventListener("mousedown", function (e) {
             "close" :
             "menu_open";
 });
+var navNotification = document.querySelector(".dashboard-topnav-item-notifications");
+navNotification.addEventListener("click", function (e) {
+    // Notifications was clicked
+});
+// -------------------------------------------------------------------------- //
+var calendar = document.querySelector(".dashboard-calendar");
+var nextMonth = document.querySelector("#month-next");
+var lastMonth = document.querySelector("#month-last");
+var monthLabel = document.querySelector("#month-label");
 export {};

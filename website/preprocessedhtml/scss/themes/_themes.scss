@@ -62,6 +62,29 @@ body {
                 }
             }
         }
+
+        .dashboard {
+            .dashboard-container {
+                .dashboard-topnav {
+                    form {
+                        input {
+                            background: $theme-light-bg;
+                            color: $theme-light-fg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dashboard-item {         
+            &:hover, &:active {
+                background: rgba(#000, 0.1);
+            }
+        }
+
+        .modal-content {
+            background: $theme-light-bg;
+        }
     }
 
     &.dark {
@@ -125,6 +148,29 @@ body {
                     background-color: darken($theme-dark-bg, 5%);
                 }
             }
+        }
+
+        .dashboard {
+            .dashboard-container {
+                .dashboard-topnav {
+                    form {
+                        input {
+                            background: $theme-dark-bg;
+                            color: $theme-dark-fg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dashboard-item {         
+            &:hover, &:active {
+                background: rgba(#fff, 0.1);
+            }
+        }
+
+        .modal-content {
+            background: $theme-dark-bg;
         }
     }
 }

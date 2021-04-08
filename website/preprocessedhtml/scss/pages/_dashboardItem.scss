@@ -1,0 +1,56 @@
+.dashboard-item {
+    border: 1px solid #bababa;
+    border-radius: 6px;
+    user-select: none;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 15px;
+
+    transition: background 0.1s ease-out;
+
+    .dashboard-item-title {
+        font-size: 1.2em;
+        line-height: 1.3;
+    }
+
+    .dashboard-item-title-due {
+        line-height: 1.3;
+        font-weight: bold;
+    }
+
+    .dashboard-item-title-sub {
+        line-height: 1.3;
+    }
+
+    &.dashboard-item-blue {
+        border-color: $blue; }
+
+    &.dashboard-item-green {
+        border-color: $green; }
+
+    &.dashboard-item-indigo {
+        border-color: $indigo; }
+
+    &.dashboard-item-orange {
+        border-color: $orange; }
+
+    &.dashboard-item-pink {
+        border-color: $pink; }
+
+    &.dashboard-item-purple {
+        border-color: $purple; }
+
+    &.dashboard-item-red {
+        border-color: $red; }
+
+    &.dashboard-item-teal {
+        border-color: $teal; }
+
+    &.dashboard-item-yellow {
+        border-color: $yellow; }
+}

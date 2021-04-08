@@ -18,3 +18,16 @@ navExpanderContainer.addEventListener("mousedown", e => {
             "close" :
             "menu_open"
 })
+
+const navNotification = document.querySelector(".dashboard-topnav-item-notifications")
+
+navNotification.addEventListener("click", e => {
+    // Notifications was clicked
+})
+
+// -------------------------------------------------------------------------- //
+
+const calendar = document.querySelector(".dashboard-calendar")
+const nextMonth = document.querySelector("#month-next")
+const lastMonth = document.querySelector("#month-last")
+const monthLabel = document.querySelector("#month-label")
